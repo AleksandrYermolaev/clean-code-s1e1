@@ -31,20 +31,22 @@ var createNewTaskElement=function(taskString){
     //button.delete
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
-
+	listItem.className="todo__list schedule";
     label.innerText=taskString;
-    label.className='schedule__task';
+    label.className='schedule__task label';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+	checkBox.className="schedule__check input";
     editInput.type="text";
-    editInput.className="schedule__task";
+    editInput.className="schedule__text input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="schedule__edit";
+    editButton.className="schedule__edit button";
 
-    deleteButton.className="schedule__delete";
+    deleteButton.className="schedule__delete button";
     deleteButtonImg.src='./remove.svg';
+	deleteButtonImg.className="btn__image";
     deleteButton.appendChild(deleteButtonImg);
 
 
